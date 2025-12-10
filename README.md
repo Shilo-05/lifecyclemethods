@@ -1,4 +1,4 @@
-# Ex.No:2 To create a HelloWorld Activity using all lifecycles methods to display messages.
+# Ex.No:1 To create a HelloWorld Activity using all lifecycles methods to display messages.
 
 
 ## AIM:
@@ -29,15 +29,88 @@ Step 7: Save and run the application.
 ```
 /*
 Program to print the text “Hello World”.
-Developed by:
-Registeration Number :
 */
+
+package com.example.my_first_app;
+import android.os.Bundle;
+import android.widget.Toast;
+import androidx.appcompat.app.AppCompatActivity;
+
+public class MainActivity extends AppCompatActivity {
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+        Toast t = Toast.makeText(getApplicationContext(),"OnCreate Method Called", Toast.LENGTH_LONG);
+        t.show();
+    }
+    protected void onStart() {
+        super.onStart();
+        Toast t = Toast.makeText(getApplicationContext(),"OnStart Method Called", Toast.LENGTH_LONG);
+        t.show();
+    }
+    protected void onResume() {
+        super.onResume();
+        Toast t = Toast.makeText(getApplicationContext(),"OnResume Method Called", Toast.LENGTH_LONG);
+        t.show();
+    }
+
+    @Override
+    protected void onRestart() {
+        super.onRestart();
+        Toast t = Toast.makeText(getApplicationContext(),"OnRestart Method Called", Toast.LENGTH_LONG);
+        t.show();
+    }
+    protected void onPause() {
+        super.onPause();
+        Toast t = Toast.makeText(getApplicationContext(),"OnPause Method Called", Toast.LENGTH_LONG);
+        t.show();
+    }
+    protected void onStop(){
+        super.onStop();
+        Toast t = Toast.makeText(getApplicationContext(),"OnStop Method Called", Toast.LENGTH_LONG);
+        t.show();
+    }
+    protected void onDestroy(){
+        super.onDestroy();
+        Toast t = Toast.makeText(getApplicationContext(),"OnDestroy Method Called", Toast.LENGTH_LONG);
+        t.show();
+    }
+}
 ```
 
 ## OUTPUT
 
+#### Design Part
+![alt text](<Output Images/Design_Part.png>)
+
+#### Coding Part
+![alt text](<Output Images/Coding_Part.png>)
+
+#### Oncreate Popup
+<img src="Output Images/OnCreate_Image.jpg" height=400>
+
+#### OnStart Popup
+<img src="Output Images/OnStart_Image.jpg" height=400>
+
+#### OnResume Popup
+<img src="Output Images/OnResume_Image.jpg" height=400>
+
+#### OnRestart Popup
+<img src="Output Images/OnRestart_Image.jpg" height=400>
+
+#### OnStop Popup
+<img src="Output Images/OnStop_Image.jpg" height=400>
+
+#### OnPause Popup
+<img src="Output Images/OnPause_Image.jpg" height=400>
+
+#### OnDestroy Popup
+<img src="Output Images/OnDestroy_Image.jpg" height=400>
 
 
 
 ## RESULT
 Thus a Simple Android Application create a HelloWorld Activity using all lifecycles methods to display messages using Android Studio is developed and executed successfully.
+
